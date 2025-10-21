@@ -1,0 +1,23 @@
+{
+  "name": "epubfromweb",
+  "version": "1.0.0",
+  "description": "Generate epub from novelight",
+  "license": "ISC",
+  "author": "Sisyphus",
+  "type": "commonjs",
+  "main": "main.js",
+  "bin": {
+    "epubNovelight": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.9.0",
+    "adm-zip": "^0.5.16",
+    "cheerio": "^1.1.2",
+    "epub-gen-memory": "^1.1.2",
+    "inquirer": "^12.10.0",
+    "xml2js": "^0.6.2"
+  }
+}
