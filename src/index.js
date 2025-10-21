@@ -99,7 +99,7 @@ async function genNovel(config){
             lang: config.lang || ""
         }, chapters);
         console.log("Ebook written successfully.");
-        const eBookPath = path.join(path.dirname(__dirname), `${config.name || tempDir}.epub`);
+        const eBookPath = path.join(process.cwd(), `${config.name || tempDir}.epub`);
         await fs.writeFile(eBookPath, content);
 
         transformToc(eBookPath, config.chunks);
