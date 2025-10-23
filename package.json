@@ -2,8 +2,16 @@
   "name": "epubfromweb",
   "version": "1.0.1",
   "description": "Generate epub from novelight",
-  "license": "ISC",
+  "license": "AGPL-3.0",
   "author": "Sisyphus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sakshamA06/Epub-from-Novelight.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sakshamA06/Epub-from-Novelight/issues"
+  },
+  "homepage": "https://github.com/sakshamA06/Epub-from-Novelight#readme",
   "type": "commonjs",
   "main": "main.js",
   "bin": {
