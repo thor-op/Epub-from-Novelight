@@ -62,7 +62,7 @@ npm start
    - **Table of Contents**: Configure TOC title and chapter groupings
    - **Language**: Two-letter language code (default: "en")
    - **File Name**: Output EPUB filename
-   - **Options**: Choose to regenerate temp files and delete them after completion
+   - **Options**: Choose to regenerate chapter IDs and delete temp files after completion
 
 3. **Wait for completion** - the tool will:
    - Fetch chapter metadata
@@ -92,7 +92,7 @@ Epub-from-Novelight/
 - **Chapter Groupings**: Use format like `[10, 5]` to group chapters in TOC
 - **Language Codes**: Use ISO 639-1 codes (en, es, fr, etc.)
 - **Temporary Files**: Option to keep or delete after generation
-- **Regeneration**: Force re-download of chapters if needed
+- **Regeneration**: Force re-fetch chapter IDs (required when changing chapter range for existing novels)
 
 ## Requirements
 
@@ -106,6 +106,7 @@ Epub-from-Novelight/
 - **Invalid URL**: Ensure the URL is from novelight.net and follows the correct format
 - **Chapter errors**: Check if the chapter range is valid for the novel
 - **TOC errors**: The tool will skip TOC transformation if the structure is unexpected
+- **Wrong chapters downloaded**: If you change the chapter range for a previously downloaded novel, set "Regenerate temporary files" to `Yes`. This forces re-fetching of chapter IDs, otherwise it uses cached IDs and may download unexpected chapters.
 
 ## Contributors
 

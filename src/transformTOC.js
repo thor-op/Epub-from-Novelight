@@ -15,9 +15,8 @@ async function transformToc(inputFile, chunks = []) {
 
         const xml = await parseStringPromise(zip.readAsText(toc), { trim: true, explicitCharkey: true, explicitArray: true });
 
-        if (!xml || !xml.html || !xml.html.body || !xml.html.body[0] || !xml.html.body[0].nav || !xml.html.body[0].nav[0] || !xml.html.body[0].nav[0].ol || !xml.html.body[0].nav[0].ol[0]) {
+        if (!xml?.html?.body?.[0]?.nav?.[0]?.ol?.[0]) {
             console.log("TOC structure not as expected, skipping transformation");
-            console.log("Available XML structure:", JSON.stringify(xml, null, 2));
             return;
         }
 
